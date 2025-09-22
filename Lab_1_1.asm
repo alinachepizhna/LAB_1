@@ -44,14 +44,9 @@ START:
     fdiv DWORD PTR B
     fstp DWORD PTR QUOT
 
-    ; --- Вивід повідомлень ---
     mov dx, offset msgSum
     mov ah, 9
     int 21h
-
-    ; Вивід результатів можна зробити через FPU → ASCII,
-    ; для простоти залишимо збереження в пам'яті
-    ; їх можна перевірити через відладчик
 
     mov dx, offset msgDiff
     mov ah, 9
